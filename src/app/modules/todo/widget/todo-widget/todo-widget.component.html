@@ -1,0 +1,15 @@
+<div class="todo-widget-container">
+  <app-todo-list-ui [todoList]="todoList$ | async "
+    (delete)="onDelete($event)"
+    (toggle)="onToggle($event)"
+    (edit)="onEdit($event)"></app-todo-list-ui>
+
+  <button class="button-round" (click)="open()">&#9997;</button>
+</div>
+
+<app-todo-create-form-ui 
+  #popup 
+  (create)="onCreate($event)" 
+  *ngIf="isCreatePopUpOpenFlag" 
+  (click)="close()">
+</app-todo-create-form-ui>

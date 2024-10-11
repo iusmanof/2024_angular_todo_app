@@ -1,0 +1,34 @@
+.start-container {
+    display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "logo"
+        "link";
+    height: 800px;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.start-container__logo{
+    grid-area: logo;
+    align-self: end;
+    justify-self: center;
+    height: 200px;
+}
+.start-link {
+    grid-area: link;
+    align-self: start;
+    height: 200px;
+    color: #ffffff;
+    font-size: 34px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.start-link p {
+    font-family: 'Montserrat-Black', sans-self;
+}

@@ -1,0 +1,49 @@
+<div class="popup-overlay">
+	<div (click)="$event.stopPropagation()"
+		class="popup-content">
+		<form (ngSubmit)="onSubmit($event)"
+			class="popup-content__form"
+			action="#">
+			<input [(ngModel)]="name"
+				class="popup-content__input-title"
+				name="title"
+				placeholder="Title"
+				required>
+			<textarea [(ngModel)]="text"
+				class="popup-content__input-text"
+				name="content"
+				placeholder="Description ..."
+				required></textarea>
+			<div class="popup-content__input-priority">
+				<label>
+					<input [(ngModel)]="priority"
+						type="radio"
+						name="priority"
+						value="low"
+						required>
+					Low
+				</label>
+				<label>
+					<input [(ngModel)]="priority"
+						type="radio"
+						name="priority"
+						value="medium"
+						required>
+					Medium
+				</label>
+				<label>
+					<input [(ngModel)]="priority"
+						type="radio"
+						name="priority"
+						value="high"
+						required>
+					High
+				</label>
+			</div>
+			<button [disabled]="!name || !text || !priority"
+				class="popup-content__button">
+				Add
+			</button>
+		</form>
+	</div>
+</div>

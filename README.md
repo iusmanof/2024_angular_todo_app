@@ -1,2 +1,8 @@
-# 2024_angular_todo_app
-Angular todo application
+# Angular todo application 2024
+
+## What I used in the project:
+- Angular
+- scss
+- ngrx
+- rxjs
+- router

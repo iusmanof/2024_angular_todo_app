@@ -1,0 +1,54 @@
+.todo-list-item{
+    display: grid;
+    grid-template-columns: 150px auto 50px 50px 50px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "titles . edit delete checkbox";
+    align-items: center;
+    padding: 0 19px;
+    margin: 21px 0;
+    height: 82px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 2px 2px #9395D3;
+
+    &__titles{
+        grid-area: titles;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title{
+        text-transform: uppercase;
+        font-family: 'Montserrat-Medium', sans-self;
+        font-weight: bold;
+        font-size: 13px;
+        color: #9395D3;
+    }
+
+    &__subtitle{
+        text-transform: uppercase;
+        font-family: 'Montserrat-Thin', sans-self;
+        font-weight: bold;
+        font-size: 10px;
+        color: #000000;
+    }
+
+    &__edit{
+        grid-area: edit;
+        justify-self: end;
+        cursor: pointer;
+    }
+
+    &__delete{
+        grid-area: delete;
+        justify-self: end;
+        cursor: pointer;
+    }
+
+    &__checkbox{
+        grid-area: checkbox;
+        justify-self: end;
+        cursor: pointer;
+    }
+}

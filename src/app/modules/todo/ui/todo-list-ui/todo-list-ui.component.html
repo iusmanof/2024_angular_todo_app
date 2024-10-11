@@ -1,0 +1,18 @@
+<ul class="todo-list-container">
+    <li *ngFor="let todo of todoList | slice:0:5">
+        <app-todo-list-item
+            *ngIf="!editIds.includes(todo.id)"
+            [todo]="todo"
+            (delete)="onDelete(todo.id)"
+            (toggle)="onToggle(todo.id)"
+            (edit)="onEditMode(todo.id)"
+            limit="5"
+        ></app-todo-list-item>
+        <app-todo-list-item-edit
+            *ngIf="editIds.includes(todo.id)"
+            [todo]="todo"
+            (edit)="onEdit($event, todo.id)"
+            >
+        </app-todo-list-item-edit>
+    </li>
+</ul>

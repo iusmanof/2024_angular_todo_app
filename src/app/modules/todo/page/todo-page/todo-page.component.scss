@@ -1,0 +1,20 @@
+.todo-page-container{
+    display: grid;
+    grid-template-rows: 118px 1fr;
+}
+
+.todo-page-container__header{
+    align-self: center;
+    color: white;
+    font-family: 'Montserrat-Medium', sans-serif;
+    text-transform: uppercase;
+    font-size: 32px;
+    padding-left: 15px;
+}
+
+.todo-page-container__small-text{
+    color: white;
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-size: 12px;
+    padding: 5px;
+}

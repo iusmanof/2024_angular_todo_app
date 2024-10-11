@@ -1,0 +1,20 @@
+.todo-widget-container{
+    display: grid;
+    grid-template-rows: 1fr [row1-start] 1fr ;
+    background-color: #B3B7EE;
+    height: calc(800px - 118px);
+}
+
+.button-round{
+  align-self: end;
+  justify-self: end;
+  background-color: #9395D3;
+  color: white;
+  border: none;
+  font-size: 31px;
+  height: 70px;
+  width: 70px;
+  box-shadow: 0 2px 4px darkslategray;
+  border-radius: 50%;
+  margin: 20px;
+}

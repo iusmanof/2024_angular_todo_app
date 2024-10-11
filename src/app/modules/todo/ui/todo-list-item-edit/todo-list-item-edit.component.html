@@ -1,0 +1,5 @@
+<form class="todo-list-item" action="#" (ngSubmit)="onEdit()" >
+    <input class="todo-list-item__input" type="text" name="name" [(ngModel)]="name">
+    <button class="todo-list-item__button-ok" [disabled]="!name">OK</button>
+    <button class="todo-list-item__button-cancel" type="button" (click)="onCancel()">Cancel</button>
+</form>

@@ -1,0 +1,17 @@
+<div class="todo-list-item">
+    <div class="todo-list-item__titles">
+        <span class="todo-list-item__title" *ngIf="!todo?.completed">{{ todo?.name }}</span>
+        <del class="todo-list-item__title"*ngIf="todo?.completed"><span>{{ todo?.name }}</span></del>
+        <span class="todo-list-item__subtitle">{{ todo?.name }}</span>
+    </div>
+    <img class="todo-list-item__edit" src="assets/svg/edit.svg" (click)="onEditMode()"alt="edit">
+    <img class="todo-list-item__delete" src="assets/svg/delete.svg" (click)="onDelete()" alt="delete">
+    <img class="todo-list-item__checkbox" src="assets/svg/check.svg" (click)="onToggle($event)" alt="delete">
+    <!-- <img class="todo-list-item__edit" (click)="onEditMode()" src="images/edit.png" alt="edit"> -->
+    <!-- <img class="todo-list-item__delete" (click)="onDelete()" src="images/delete.png" alt="delete"> -->
+    <!-- <span class="todo-list-item__edit" (click)="onEditMode()">Edit</span> -->
+    <!-- <span class="todo-list-item__delete"(click)="onDelete()">Delete</span> -->
+    <!-- <label class="todo-list-item__checkbox">
+        <input type="checkbox" [checked]="todo?.completed" (click)="onToggle($event)" >
+    </label> -->
+</div>

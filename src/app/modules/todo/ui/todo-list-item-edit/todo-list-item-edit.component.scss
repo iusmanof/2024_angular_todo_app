@@ -1,0 +1,39 @@
+.todo-list-item{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    grid-template-areas: 
+      "input . button-cancel button-ok";
+    align-items: center;
+    padding: 0 19px;
+    margin: 21px 0;
+    height: 82px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 2px 2px #9395D3;
+    font-family: 'Montserrat-Medium', sans-self;
+    font-size: 13px;
+    color: #9395D3;
+
+
+    &__input{
+        grid-area: input;
+        justify-self: end;
+        cursor: pointer;
+        border-bottom: 1px solid #8B8787;
+        color: #8B8787;
+    }
+    &__button-ok{
+        grid-area: button-ok;
+        justify-self: end;
+        cursor: pointer;
+        font-size: 10px;
+        color: #9395D3;
+    }
+    &__button-cancel{
+        grid-area: button-cancel;
+        justify-self: end;
+        cursor: pointer;
+        font-size: 10px;
+        color: #9395D3;
+    }
+}
