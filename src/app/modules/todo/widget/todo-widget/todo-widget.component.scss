@@ -2,13 +2,15 @@
     display: grid;
     grid-template-rows: 1fr [row1-start] 1fr ;
     background-color: #B3B7EE;
-    height: calc(800px - 118px);
+    height: calc(var(--height-phone-wrapper) - 90px);
+    border-bottom-right-radius: var(--border-radius-phone-wrapper);
+    border-bottom-left-radius: var(--border-radius-phone-wrapper);
 }
 
 .button-round{
   align-self: end;
   justify-self: end;
-  background-color: #9395D3;
+  background-color: var(--violet-main-color);
   color: white;
   border: none;
   font-size: 31px;

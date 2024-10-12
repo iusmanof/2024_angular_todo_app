@@ -10,7 +10,7 @@
     height: 82px;
     border-radius: 15px;
     background-color: white;
-    box-shadow: 2px 2px #9395D3;
+    box-shadow: 2px 2px var(--violet-main-color);
 
     &__titles{
         grid-area: titles;
@@ -23,7 +23,7 @@
         font-family: 'Montserrat-Medium', sans-self;
         font-weight: bold;
         font-size: 13px;
-        color: #9395D3;
+        color: var(--violet-main-color);
     }
 
     &__subtitle{

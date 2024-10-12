@@ -1,6 +1,6 @@
 .todo-page-container{
     display: grid;
-    grid-template-rows: 118px 1fr;
+    grid-template-rows: var(--height-hat-app-wrapper) var(--height-hat-version-app-wrapper) auto;
 }
 
 .todo-page-container__header{

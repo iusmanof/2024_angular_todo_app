@@ -1,6 +1,29 @@
-.wrapper {
-    background-color: #9395D3;
-    width: 375px;
-    height: 800px;
-    margin: auto;
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.app-wrapper {
+
+    position: fixed; 
+    top: 100px; 
+    left: 487px;
+    transform: translateX(-50%);
+    z-index: 2;
+    background-color: var(--violet-main-color);
+    width: var(--width-phone-wrapper);
+    height: var(--height-phone-wrapper);
+    border-radius: var(--border-radius-phone-wrapper);
+
+}
+
+.phone{
+    position: fixed; 
+    top: -245px;
+    z-index: 1;
+    width: 980px;
+    height: 1400px;
 }

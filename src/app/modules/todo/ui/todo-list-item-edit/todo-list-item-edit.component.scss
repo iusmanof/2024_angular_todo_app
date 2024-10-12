@@ -9,10 +9,10 @@
     height: 82px;
     border-radius: 15px;
     background-color: white;
-    box-shadow: 2px 2px #9395D3;
+    box-shadow: 2px 2px var(--violet-main-color);
     font-family: 'Montserrat-Medium', sans-self;
     font-size: 13px;
-    color: #9395D3;
+    color: var(--violet-main-color);
 
 
     &__input{
@@ -27,13 +27,13 @@
         justify-self: end;
         cursor: pointer;
         font-size: 10px;
-        color: #9395D3;
+        color: var(--violet-main-color);
     }
     &__button-cancel{
         grid-area: button-cancel;
         justify-self: end;
         cursor: pointer;
         font-size: 10px;
-        color: #9395D3;
+        color: var(--violet-main-color);;
     }
 }
