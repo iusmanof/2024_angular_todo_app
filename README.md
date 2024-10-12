@@ -9,7 +9,6 @@
 
 1. тесты
 2. добавить данные ngrx
-3. not found page
 4. prettier
 5. eslint
 6. color priority
