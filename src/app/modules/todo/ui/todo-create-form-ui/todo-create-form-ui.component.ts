@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { PriorityState } from '../../model/todo';
 
 @Component({
   selector: 'app-todo-create-form-ui',
@@ -6,10 +7,12 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './todo-create-form-ui.component.scss',
 })
 export class TodoCreateFormUiComponent {
+  [x: string]: any;
   name: string = '';
   text: string = '';
-  priority: number = 0;
-
+  priority: PriorityState = PriorityState.low;
+  PriorityState = PriorityState;
+  
   @Output()
   create = new EventEmitter<string>();
     

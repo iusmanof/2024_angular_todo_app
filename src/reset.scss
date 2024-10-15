@@ -77,3 +77,12 @@ button {
     /* Corrects inability to style clickable `input` types in iOS */
     -webkit-appearance: none;
 }
+
+
+// textarea
+textarea {
+  resize: none;
+  border: none;
+  overflow: auto;
+  outline: none;
+}

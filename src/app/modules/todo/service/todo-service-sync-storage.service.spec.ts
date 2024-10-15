@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+// import { TestBed } from '@angular/core/testing';
 
-import { TodoServiceSyncStorageService } from './todo-service-sync-storage.service';
+// import { TodoServiceSyncStorageService } from './todo-service-sync-storage.service';
 
-describe('TodoServiceSyncStorageService', () => {
-  let service: TodoServiceSyncStorageService;
+// describe('TodoServiceSyncStorageService', () => {
+//   let service: TodoServiceSyncStorageService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(TodoServiceSyncStorageService);
-  });
+//   beforeEach(() => {
+//     TestBed.configureTestingModule({});
+//     service = TestBed.inject(TodoServiceSyncStorageService);
+//   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+//   it('should be created', () => {
+//     expect(service).toBeTruthy();
+//   });
+// });

@@ -15,28 +15,16 @@
 				placeholder="Description ..."
 				required></textarea>
 			<div class="popup-content__input-priority">
-				<label>
-					<input [(ngModel)]="priority"
-						type="radio"
-						name="priority"
-						value="low"
-						required>
+				<label [ngClass]="{'selected': priority === PriorityState.low}">
+					<input [(ngModel)]="priority" type="radio" name="priority" [value]="PriorityState.low" required>
 					Low
 				</label>
-				<label>
-					<input [(ngModel)]="priority"
-						type="radio"
-						name="priority"
-						value="medium"
-						required>
+				<label [ngClass]="{'selected': priority === PriorityState.medium}">
+					<input [(ngModel)]="priority" type="radio" name="priority" [value]="PriorityState.medium" required>
 					Medium
 				</label>
-				<label>
-					<input [(ngModel)]="priority"
-						type="radio"
-						name="priority"
-						value="high"
-						required>
+				<label [ngClass]="{'selected': priority === PriorityState.high}">
+					<input [(ngModel)]="priority" type="radio" name="priority" [value]="PriorityState.high" required>
 					High
 				</label>
 			</div>

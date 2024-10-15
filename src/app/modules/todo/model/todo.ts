@@ -3,3 +3,9 @@ export interface Todo {
     name: string;
     completed: boolean;
 }
+
+export enum PriorityState {
+    low = 'low', 
+    medium = 'medium',
+    high = 'high'
+}
