@@ -31,7 +31,7 @@ export class TodoServiceSyncStorageService {
     window.addEventListener('storage', () => this.loadFromStorage() )
   }
 
-  private loadFromStorage() {
+  protected loadFromStorage() {
     const storageState = localStorage.getItem(TODO_LOCALSTORAGE_KEY)
     if (storageState) {
       this.store$.dispatch(new TodoLoadStateAction({ state: JSON.parse(storageState) }))

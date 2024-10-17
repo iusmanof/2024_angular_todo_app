@@ -31,6 +31,6 @@ describe('StartPageComponent', () => {
     const link: HTMLLinkElement = fixture.nativeElement.querySelector('a.start-link')
     expect(link).toBeTruthy()
     expect(link.getAttribute('routerLink')).toBe('/todo-page')
-    expect(link.textContent).toContain('Go to Todo Page')
+    expect(link.textContent).toContain('Start your')
   })
 });
