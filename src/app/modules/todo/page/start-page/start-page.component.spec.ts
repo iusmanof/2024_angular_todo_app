@@ -20,4 +20,17 @@ describe('StartPageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('start page has logo', () => {
+    const img: HTMLImageElement = fixture.nativeElement.querySelector('img.start-container__logo')
+    expect(img.src).toContain('images/to-do.png')
+    expect(img.alt).toBe('todo-logo')
+  })
+
+  it('start page has link to todo widget', () => {
+    const link: HTMLLinkElement = fixture.nativeElement.querySelector('a.start-link')
+    expect(link).toBeTruthy()
+    expect(link.getAttribute('routerLink')).toBe('/todo-page')
+    expect(link.textContent).toContain('Go to Todo Page')
+  })
 });
