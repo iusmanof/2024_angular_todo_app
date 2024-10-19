@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Todo } from '../../model/todo';
+import { PriorityState, Todo } from '../../model/todo';
 
 @Component({
   selector: 'app-todo-list-item',
@@ -30,5 +30,21 @@ export class TodoListItemComponent {
 
   onEditMode(){
     this.edit.emit();
+  }
+
+  getPriorityColor(): string {
+    if (this.todo?.priority === PriorityState.low){
+      return 'priority-low'
+    }
+
+    if (this.todo?.priority === PriorityState.medium){
+      return 'priority-medium'
+    }
+
+    if (this.todo?.priority === PriorityState.high){
+      return 'priority-high'
+    }
+
+    return '';
   }
 }

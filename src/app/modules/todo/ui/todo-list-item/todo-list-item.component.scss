@@ -12,10 +12,12 @@
     background-color: white;
     box-shadow: 2px 2px var(--violet-main-color);
 
-    &__titles{
+    &__container{
         grid-area: titles;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        height: 50px;
     }
 
     &__title{
@@ -26,12 +28,18 @@
         color: var(--violet-main-color);
     }
 
-    &__subtitle{
+    &__text{
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
         text-transform: uppercase;
         font-family: 'Montserrat-Thin', sans-self;
         font-weight: bold;
         font-size: 10px;
         color: #000000;
+        
     }
 
     &__edit{
@@ -51,4 +59,22 @@
         justify-self: end;
         cursor: pointer;
     }
+}
+
+.priority-low {
+    background-color: rgb(156, 255, 43);
+    width: 10px;
+    height: 10px;
+}
+
+.priority-medium {
+    background-color: rgb(230, 211, 43);
+    width: 10px;
+    height: 10px;
+}
+
+.priority-high {
+    background-color: rgb(255, 43, 43);
+    width: 10px;
+    height: 10px;
 }

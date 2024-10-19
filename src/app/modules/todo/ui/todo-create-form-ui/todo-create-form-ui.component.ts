@@ -19,7 +19,7 @@ export class TodoCreateFormUiComponent {
   onSubmit(event: Event) {
     event.preventDefault();
     if (this.name && this.text && this.priority) {
-      const newTodo = { name: this.name, text: this.text, priority: PriorityState.low }
+      const newTodo = { name: this.name, text: this.text, priority: this.priority }
       this.create.emit(newTodo);
       this.name = '';
     }

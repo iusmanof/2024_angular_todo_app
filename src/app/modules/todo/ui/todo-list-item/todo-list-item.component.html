@@ -1,11 +1,9 @@
 <div class="todo-list-item">
-    <div class="todo-list-item__titles">
+    <div class="todo-list-item__container">
+        <span [ngClass]="getPriorityColor()"></span>
         <span class="todo-list-item__title" *ngIf="!todo?.completed">{{ todo?.name }}</span>
         <del class="todo-list-item__title"*ngIf="todo?.completed"><span>{{ todo?.name }}</span></del>
-        <span class="todo-list-item__subtitle">{{ todo?.name }}</span>
-        <span>{{ todo?.text }}</span>
-        <span>{{ todo?.priority }}</span>
-
+        <span class="todo-list-item__text">{{ todo?.text | slice:0:50 }}</span>
     </div>
     <img class="todo-list-item__edit" src="assets/svg/edit.svg" (click)="onEditMode()"alt="edit">
     <img class="todo-list-item__delete" src="assets/svg/delete.svg" (click)="onDelete()" alt="delete">
