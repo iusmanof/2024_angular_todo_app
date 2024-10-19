@@ -22,6 +22,4 @@ describe('TodoCreateFormUiComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  xit('create form with mock', () => {})
 });

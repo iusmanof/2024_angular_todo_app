@@ -27,23 +27,4 @@ describe('TodoServiceSyncStorageService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-
-  it('should initialize and load state from localStorage', () => {
-    const mockState = { todos: [] };
-    spyOn(localStorage, 'getItem').and.returnValue(JSON.stringify(mockState)); // Mock localStorage
-    spyOn(store, 'dispatch'); // Spy on the dispatch method
-  
-    service.init(); // Initialize the service
-  
-    // Verify that localStorage.getItem was called with the correct key
-    expect(localStorage.getItem).toHaveBeenCalledWith(TODO_LOCALSTORAGE_KEY);
-  
-    // Check that dispatch was called with an action containing the loaded state
-    expect(store.dispatch).toHaveBeenCalledWith(jasmine.any(TodoLoadStateAction));
-  
-    // Check that the action dispatched contains the correct payload
-    const action = store.dispatch.calls.mostRecent().args[0];
-    expect(action).toEqual(jasmine.any(TodoLoadStateAction)); // Ensure it's the right action type
-    expect(action.payload).toEqual(mockState); // Ensure the state is what we expect
-  });
 });

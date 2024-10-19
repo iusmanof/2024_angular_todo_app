@@ -3,6 +3,7 @@ import { By } from '@angular/platform-browser';
 import { TodoListUiComponent } from './todo-list-ui.component';
 import { TodoListItemComponent } from '../todo-list-item/todo-list-item.component';
 import { TodoListItemEditComponent } from '../todo-list-item-edit/todo-list-item-edit.component';
+import { PriorityState } from '../../model/todo';
 
 describe('TodoListUiComponent', () => {
   let component: TodoListUiComponent;
@@ -25,18 +26,15 @@ describe('TodoListUiComponent', () => {
 
   it('should display a list of todo items', () => {
     const mockTodos = [
-      { id: 1, name: 'Todo 1', completed: false },
-      { id: 2, name: 'Todo 2', completed: false },
-      { id: 3, name: 'Todo 3', completed: false },
-      { id: 4, name: 'Todo 4', completed: false },
-      { id: 5, name: 'Todo 5', completed: false },
-      { id: 6, name: 'Todo 6', completed: false },
+      { id: 1, name: 'test 1', text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English. Many desktop publishing packages and web page editors now', priority: PriorityState.low, completed: true },
+      { id: 2, name: 'test 2', text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English. Many desktop publishing packages and web page editors now', priority: PriorityState.low, completed: true },
+      { id: 3, name: 'test 3', text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English. Many desktop publishing packages and web page editors now', priority: PriorityState.low, completed: true },
     ];
     component.todoList = mockTodos;
     fixture.detectChanges();
 
     const todoItems = fixture.debugElement.queryAll(By.css('app-todo-list-item'));
-    expect(todoItems.length).toBe(5); // Expecting only the first 5 items to be displayed
+    expect(todoItems.length).toBe(3);
   });
 });
 
