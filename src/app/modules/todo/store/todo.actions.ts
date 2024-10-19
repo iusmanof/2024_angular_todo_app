@@ -1,5 +1,6 @@
 import { Action } from "@ngrx/store";
 import { TodoState } from "./todo.reducer";
+import { PriorityState } from "../model/todo";
 
 export enum todoActionsType {
   create = '[TODO] create todo item',
@@ -11,7 +12,7 @@ export enum todoActionsType {
 
 export class TodoCreateAction implements Action {
     readonly type = todoActionsType.create;
-    constructor(public payload: {name: string}){
+    constructor(public payload: {name: string , text: string, priority: PriorityState}){
     }
 }
 

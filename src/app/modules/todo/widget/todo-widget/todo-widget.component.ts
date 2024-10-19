@@ -4,7 +4,7 @@ import { TodoState } from '../../store/todo.reducer';
 import { TodoCreateAction, TodoDeleteAction, TodoEditAction, TodoToggleAction } from '../../store/todo.actions';
 import { todoListSelector } from '../../store/todo.selectors';
 import { Observable } from 'rxjs';
-import { Todo } from '../../model/todo';
+import { Todo, TodoModelCreate } from '../../model/todo';
 import { TodoServiceSyncStorageService } from '../../service/todo-service-sync-storage.service';
 import { TodoCreateFormUiComponent } from '../../ui/todo-create-form-ui/todo-create-form-ui.component';
 
@@ -45,8 +45,10 @@ export class TodoWidgetComponent {
     this.todoStorageSync.init()
   }
 
-  onCreate(name: string) {
-    this.store.dispatch(new TodoCreateAction({ name }));
+  // onCreate(name: string) {
+  onCreate(newTodo: TodoModelCreate) {
+    this.store.dispatch(new TodoCreateAction(newTodo))
+    // this.store.dispatch(new TodoCreateAction({ name }));
     this.close();
   }
 

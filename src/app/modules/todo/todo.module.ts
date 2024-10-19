@@ -4,7 +4,7 @@ import { StoreModule } from '@ngrx/store';
 import { TODO_REDUCER_NODE, todoReducer } from './store/todo.reducer';
 import { TodoPageComponent } from './page/todo-page/todo-page.component';
 import { RouterModule } from '@angular/router';
-import { routes } from './routes';
+import { routes } from '../routing/routes';
 import { TodoWidgetComponent } from './widget/todo-widget/todo-widget.component';
 import { TodoCreateFormUiComponent } from './ui/todo-create-form-ui/todo-create-form-ui.component';
 import { FormsModule } from '@angular/forms';
