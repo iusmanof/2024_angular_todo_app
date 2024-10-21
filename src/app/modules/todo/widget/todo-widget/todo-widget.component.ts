@@ -4,14 +4,11 @@ import { TodoState } from '../../store/todo.reducer';
 import { TodoCreateAction, TodoDeleteAction, TodoEditAction, TodoToggleAction } from '../../store/todo.actions';
 import { todoListSelector } from '../../store/todo.selectors';
 import { Observable } from 'rxjs';
-import { Todo, TodoModelCreate } from '../../model/todo';
+import { EditPayload, Todo, TodoModelCreate } from '../../model/todo';
 import { TodoServiceSyncStorageService } from '../../service/todo-service-sync-storage.service';
 import { TodoCreateFormUiComponent } from '../../ui/todo-create-form-ui/todo-create-form-ui.component';
 
-interface EditPayload {
-  id: number;
-  name: string;
-}
+
 
 @Component({
   selector: 'app-todo-widget',
@@ -61,8 +58,8 @@ export class TodoWidgetComponent {
   }
 
   onEdit(payload: EditPayload) {
-    const { id, name } = payload;
-    this.store.dispatch(new TodoEditAction({ id, name }));
+    const { id, name, text, priority } = payload;
+    this.store.dispatch(new TodoEditAction({ id, name, text, priority }));
   }
 
   isCreatePopUpOpen() {

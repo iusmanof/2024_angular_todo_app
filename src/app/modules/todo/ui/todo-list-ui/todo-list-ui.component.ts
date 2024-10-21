@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Todo } from '../../model/todo';
+import { PriorityState, Todo, TodoModelEdit } from '../../model/todo';
 
 @Component({
   selector: 'app-todo-list-ui',
@@ -20,7 +20,7 @@ export class TodoListUiComponent {
   toggle = new EventEmitter<number>()
 
   @Output()
-  edit = new EventEmitter<{id: number, name: string}>()  
+  edit = new EventEmitter<{id: number, name: string, text: string, priority: PriorityState}>()  
     
   onDelete(id: number) {
     this.delete.emit(id)
@@ -30,9 +30,14 @@ export class TodoListUiComponent {
     this.toggle.emit(id)
   }
 
-  onEdit(name: string, id: number) {
+  onEdit(obj: TodoModelEdit, id: number) {
     this.editIds = this.editIds.filter(el => el !== id)
-    this.edit.emit({id, name})
+    this.edit.emit({
+      id,
+      name: obj.name,
+      text: obj.text,
+      priority: obj.priority,
+    });
   }
 
   onEditMode(id: number){

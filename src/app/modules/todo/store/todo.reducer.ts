@@ -49,7 +49,7 @@ export const todoReducer = (state = initailState, action: todoActions) => {
         case todoActionsType.edit:
             return {
                 ...state,
-                todoList: state.todoList.map(todo => todo.id === action.payload.id ? { ...todo, name: action.payload.name } : todo)
+                todoList: state.todoList.map(todo => todo.id === action.payload.id ? { ...todo, name: action.payload.name, text: action.payload.text, priority: action.payload.priority } : todo)
             };
         case todoActionsType.load:
             return {

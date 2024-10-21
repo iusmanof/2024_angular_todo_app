@@ -29,7 +29,7 @@ export class TodoToggleAction implements Action {
 
 export class TodoEditAction implements Action {
   readonly type = todoActionsType.edit;
-  constructor(public payload: { id: number, name: string }) {}
+  constructor(public payload: { id: number, name: string, text: string, priority: PriorityState }) {}
 }
 
 export class TodoLoadStateAction implements Action {
