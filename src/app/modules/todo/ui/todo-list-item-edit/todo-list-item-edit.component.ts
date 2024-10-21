@@ -11,7 +11,7 @@ export class TodoListItemEditComponent {
   text? = '';
   priority? = PriorityState.low;
   PriorityState = PriorityState;
-  
+
   @Input()
   todo?: Todo;
 

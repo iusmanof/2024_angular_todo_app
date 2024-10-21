@@ -10,24 +10,21 @@ import { RouterModule } from '@angular/router';
 import { StartPageComponent } from './modules/todo/page/start-page/start-page.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    StartPageComponent,
-  ],
+  declarations: [AppComponent, StartPageComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {
-        path: "**",
-        redirectTo: ""
-      }
+        path: '**',
+        redirectTo: '',
+      },
     ]),
     AppRoutingModule,
     TodoModule,
     StoreModule.forRoot({}, {}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,14 +1,17 @@
 import { Component, ViewChild } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { TodoState } from '../../store/todo.reducer';
-import { TodoCreateAction, TodoDeleteAction, TodoEditAction, TodoToggleAction } from '../../store/todo.actions';
+import {
+  TodoCreateAction,
+  TodoDeleteAction,
+  TodoEditAction,
+  TodoToggleAction,
+} from '../../store/todo.actions';
 import { todoListSelector } from '../../store/todo.selectors';
 import { Observable } from 'rxjs';
 import { EditPayload, Todo, TodoModelCreate } from '../../model/todo';
 import { TodoServiceSyncStorageService } from '../../service/todo-service-sync-storage.service';
 import { TodoCreateFormUiComponent } from '../../ui/todo-create-form-ui/todo-create-form-ui.component';
-
-
 
 @Component({
   selector: 'app-todo-widget',
@@ -39,12 +42,12 @@ export class TodoWidgetComponent {
   // todoList$: Observable<Todo[]>  = this.store.pipe(select(todoListSelector));
 
   ngOnInit() {
-    this.todoStorageSync.init()
+    this.todoStorageSync.init();
   }
 
   // onCreate(name: string) {
   onCreate(newTodo: TodoModelCreate) {
-    this.store.dispatch(new TodoCreateAction(newTodo))
+    this.store.dispatch(new TodoCreateAction(newTodo));
     // this.store.dispatch(new TodoCreateAction({ name }));
     this.close();
   }

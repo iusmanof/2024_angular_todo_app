@@ -9,9 +9,8 @@ describe('TodoListItemEditComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [FormsModule],
-      declarations: [TodoListItemEditComponent]
-    })
-    .compileComponents();
+      declarations: [TodoListItemEditComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TodoListItemEditComponent);
     component = fixture.componentInstance;
@@ -23,27 +22,28 @@ describe('TodoListItemEditComponent', () => {
   });
 
   it('should call onEdit when form is submitted', () => {
-    spyOn(component, 'onEdit'); 
+    spyOn(component, 'onEdit');
     const form = fixture.nativeElement.querySelector('form');
-    form.dispatchEvent(new Event('ngSubmit')); 
+    form.dispatchEvent(new Event('ngSubmit'));
     expect(component.onEdit).toHaveBeenCalled();
   });
 
-  it('should enable the OK button when name is filled',() => {
-    component.name = "test task"
-    fixture.detectChanges()
+  it('should enable the OK button when name is filled', () => {
+    component.name = 'test task';
+    fixture.detectChanges();
 
-    const btn = fixture.nativeElement.querySelector('.todo-list-item__button-ok');
-    expect(btn.disabled).toBeFalse()
-  })
+    const btn = fixture.nativeElement.querySelector(
+      '.todo-list-item__button-ok'
+    );
+    expect(btn.disabled).toBeFalse();
+  });
 
   it('should click the cancel button', () => {
-    spyOn(component, 'onCancel')
-    const btn = fixture.nativeElement.querySelector('.todo-list-item__button-cancel')
-    btn.click()
+    spyOn(component, 'onCancel');
+    const btn = fixture.nativeElement.querySelector(
+      '.todo-list-item__button-cancel'
+    );
+    btn.click();
     expect(component.onCancel).toHaveBeenCalled();
-  })
-
+  });
 });
-
-

@@ -8,9 +8,8 @@ describe('PageNotFoundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PageNotFoundComponent]
-    })
-    .compileComponents();
+      declarations: [PageNotFoundComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PageNotFoundComponent);
     component = fixture.componentInstance;
@@ -23,11 +22,13 @@ describe('PageNotFoundComponent', () => {
 
   it('The page is marked "Page not found"', () => {
     const headingElems = fixture.nativeElement.querySelector('h2');
-    expect((headingElems.textContent as string).trim()).toBe('Page not found')
-  })
+    expect((headingElems.textContent as string).trim()).toBe('Page not found');
+  });
 
   it('class .page-not-found__title exist', () => {
-    const element = fixture.nativeElement.querySelector('.page-not-found__title')
-    expect(element).toBeTruthy()
-  })
+    const element = fixture.nativeElement.querySelector(
+      '.page-not-found__title'
+    );
+    expect(element).toBeTruthy();
+  });
 });

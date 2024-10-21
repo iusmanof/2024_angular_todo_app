@@ -1,15 +1,15 @@
 export interface Todo {
-    id: number;
-    name: string;
-    text: string;
-    priority: PriorityState
-    completed: boolean;
+  id: number;
+  name: string;
+  text: string;
+  priority: PriorityState;
+  completed: boolean;
 }
 
 export interface TodoModelCreate {
-    name: string;
-    text: string;
-    priority: PriorityState
+  name: string;
+  text: string;
+  priority: PriorityState;
 }
 
 export interface TodoModelEdit {
@@ -19,9 +19,9 @@ export interface TodoModelEdit {
 }
 
 export enum PriorityState {
-    low = 'low', 
-    medium = 'medium',
-    high = 'high'
+  low = 'low',
+  medium = 'medium',
+  high = 'high',
 }
 
 export interface EditPayload {

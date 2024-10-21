@@ -1,13 +1,13 @@
-.todo-widget-container{
-    display: grid;
-    grid-template-rows: 1fr [row1-start] 1fr ;
-    background-color: #B3B7EE;
-    height: calc(var(--height-phone-wrapper) - 90px);
-    border-bottom-right-radius: var(--border-radius-phone-wrapper);
-    border-bottom-left-radius: var(--border-radius-phone-wrapper);
+.todo-widget-container {
+  display: grid;
+  grid-template-rows: 1fr [row1-start] 1fr;
+  background-color: #b3b7ee;
+  height: calc(var(--height-phone-wrapper) - 90px);
+  border-bottom-right-radius: var(--border-radius-phone-wrapper);
+  border-bottom-left-radius: var(--border-radius-phone-wrapper);
 }
 
-.button-round{
+.button-round {
   align-self: end;
   justify-self: end;
   background-color: var(--violet-main-color);

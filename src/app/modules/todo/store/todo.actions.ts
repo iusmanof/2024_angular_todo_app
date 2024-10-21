@@ -1,6 +1,6 @@
-import { Action } from "@ngrx/store";
-import { TodoState } from "./todo.reducer";
-import { PriorityState } from "../model/todo";
+import { Action } from '@ngrx/store';
+import { TodoState } from './todo.reducer';
+import { PriorityState } from '../model/todo';
 
 export enum todoActionsType {
   create = '[TODO] create todo item',
@@ -11,15 +11,15 @@ export enum todoActionsType {
 }
 
 export class TodoCreateAction implements Action {
-    readonly type = todoActionsType.create;
-    constructor(public payload: {name: string , text: string, priority: PriorityState}){
-    }
+  readonly type = todoActionsType.create;
+  constructor(
+    public payload: { name: string; text: string; priority: PriorityState }
+  ) {}
 }
 
 export class TodoDeleteAction implements Action {
-    readonly type = todoActionsType.delete;
-    constructor(public payload: {id: number}){
-    }
+  readonly type = todoActionsType.delete;
+  constructor(public payload: { id: number }) {}
 }
 
 export class TodoToggleAction implements Action {
@@ -29,7 +29,14 @@ export class TodoToggleAction implements Action {
 
 export class TodoEditAction implements Action {
   readonly type = todoActionsType.edit;
-  constructor(public payload: { id: number, name: string, text: string, priority: PriorityState }) {}
+  constructor(
+    public payload: {
+      id: number;
+      name: string;
+      text: string;
+      priority: PriorityState;
+    }
+  ) {}
 }
 
 export class TodoLoadStateAction implements Action {
@@ -37,4 +44,9 @@ export class TodoLoadStateAction implements Action {
   constructor(public payload: { state: TodoState }) {}
 }
 
-export type todoActions = TodoCreateAction | TodoDeleteAction | TodoToggleAction | TodoEditAction | TodoLoadStateAction;
+export type todoActions =
+  | TodoCreateAction
+  | TodoDeleteAction
+  | TodoToggleAction
+  | TodoEditAction
+  | TodoLoadStateAction;

@@ -8,9 +8,8 @@ describe('StartPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [StartPageComponent]
-    })
-    .compileComponents();
+      declarations: [StartPageComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(StartPageComponent);
     component = fixture.componentInstance;
@@ -22,15 +21,18 @@ describe('StartPageComponent', () => {
   });
 
   it('start page has logo', () => {
-    const img: HTMLImageElement = fixture.nativeElement.querySelector('img.start-container__logo')
-    expect(img.src).toContain('images/to-do.png')
-    expect(img.alt).toBe('todo-logo')
-  })
+    const img: HTMLImageElement = fixture.nativeElement.querySelector(
+      'img.start-container__logo'
+    );
+    expect(img.src).toContain('images/to-do.png');
+    expect(img.alt).toBe('todo-logo');
+  });
 
   it('start page has link to todo widget', () => {
-    const link: HTMLLinkElement = fixture.nativeElement.querySelector('a.start-link')
-    expect(link).toBeTruthy()
-    expect(link.getAttribute('routerLink')).toBe('/todo-page')
-    expect(link.textContent).toContain('Start your')
-  })
+    const link: HTMLLinkElement =
+      fixture.nativeElement.querySelector('a.start-link');
+    expect(link).toBeTruthy();
+    expect(link.getAttribute('routerLink')).toBe('/todo-page');
+    expect(link.textContent).toContain('Start your');
+  });
 });

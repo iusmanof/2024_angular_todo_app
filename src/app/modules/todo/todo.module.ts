@@ -11,8 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { TodoListUiComponent } from './ui/todo-list-ui/todo-list-ui.component';
 import { TodoListItemComponent } from './ui/todo-list-item/todo-list-item.component';
 import { TodoListItemEditComponent } from './ui/todo-list-item-edit/todo-list-item-edit.component';
-import { PageNotFoundComponent } from './page/page-not-found/page-not-found.component'
-
+import { PageNotFoundComponent } from './page/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [

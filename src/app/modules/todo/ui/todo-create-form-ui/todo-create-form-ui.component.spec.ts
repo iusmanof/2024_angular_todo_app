@@ -10,9 +10,8 @@ describe('TodoCreateFormUiComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [FormsModule], // Add FormsModule here
-      declarations: [TodoCreateFormUiComponent]
-    })
-    .compileComponents();
+      declarations: [TodoCreateFormUiComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TodoCreateFormUiComponent);
     component = fixture.componentInstance;
