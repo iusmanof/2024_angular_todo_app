@@ -7,8 +7,7 @@
 - rxjs
 - router
 - unit-tests
+- prettier
+- eslint
 
-2. добавить данные ngrx
-4. prettier
-5. eslint
-6. edit ??
+![demo](https://github.com/user-attachments/assets/9786e4df-ba19-4fa7-9fad-cd62656bd05b)
